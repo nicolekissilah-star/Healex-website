@@ -1,0 +1,901 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f7f8f3;
+  color: #222;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: #1f5c44;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #1f5c44;
+}
+
+.nav-btn {
+  background: #1f5c44;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.nav-btn:hover {
+  background: #174a37;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   SHARED UTILITIES
+=========================== */
+.section-tag {
+  color: #1f5c44;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.btn-link {
+  display: inline-block;
+  background: #1f5c44;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-link:hover {
+  background: #174a37;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 340px;
+  gap: 40px;
+  align-items: center;
+  padding: 80px;
+  background: white;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+.hero-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+.hero-content button {
+  background: #1f5c44;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.hero-content button:hover {
+  background: #174a37;
+  transform: translateY(-2px);
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 30px;
+  height: 480px;
+  object-fit: cover;
+}
+
+/* APPOINTMENT CARD */
+.appointment-card {
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+}
+
+.appointment-card h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #111;
+}
+
+.appointment-card input,
+.appointment-card select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.appointment-card input:focus,
+.appointment-card select:focus {
+  border-color: #1f5c44;
+}
+
+.appointment-card button {
+  width: 100%;
+  background: #1f5c44;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.appointment-card button:hover {
+  background: #174a37;
+}
+
+/* ===========================
+   STATS STRIP
+=========================== */
+.stats-strip {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 80px;
+  background: #1f5c44;
+}
+
+.stat {
+  text-align: center;
+  color: white;
+}
+
+.stat strong {
+  display: block;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.stat span {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* ===========================
+   SERVICES PREVIEW (home)
+=========================== */
+.services-preview {
+  padding: 100px 80px;
+  text-align: center;
+  background: #f7f8f3;
+}
+
+.services-preview h2 {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.preview-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.preview-card:hover {
+  transform: translateY(-8px);
+}
+
+.preview-icon {
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.preview-card h3 {
+  color: #1f5c44;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.preview-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ===========================
+   ABOUT PREVIEW (home)
+=========================== */
+.about-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  padding: 100px 80px;
+  background: white;
+}
+
+.about-preview-image img {
+  width: 100%;
+  border-radius: 30px;
+  height: 480px;
+  object-fit: cover;
+}
+
+.about-preview-content h2 {
+  font-size: 46px;
+  margin-bottom: 22px;
+  line-height: 1.15;
+}
+
+.about-preview-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+/* ===========================
+   DOCTORS SECTION
+=========================== */
+.doctors-section {
+  padding: 100px 80px;
+  text-align: center;
+  background: #f7f8f3;
+}
+
+.doctors-section h2 {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.doctor-card {
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+  transition: transform 0.3s;
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+}
+
+.doctor-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.doctor-card h4 {
+  font-size: 18px;
+  margin: 18px 20px 6px;
+  color: #111;
+}
+
+.doctor-card span {
+  display: block;
+  color: #1f5c44;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+.testimonial-section {
+  padding: 100px 80px;
+  text-align: center;
+  background: white;
+}
+
+.testimonial-section h2 {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #f7f8f3;
+  padding: 35px 30px;
+  border-radius: 20px;
+  text-align: left;
+  border-left: 4px solid #1f5c44;
+}
+
+.testimonial-card p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-card strong {
+  color: #1f5c44;
+}
+
+/* ===========================
+   PAGE HERO (inner pages)
+=========================== */
+.page-hero {
+  background: #1f5c44;
+  color: white;
+  text-align: center;
+  padding: 80px;
+}
+
+.page-hero .section-tag {
+  color: rgba(255,255,255,0.7);
+}
+
+.page-hero h1 {
+  font-size: 52px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.15;
+}
+
+.page-hero p {
+  font-size: 18px;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===========================
+   ABOUT PAGE
+=========================== */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  padding: 100px 80px;
+  background: white;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 30px;
+  height: 520px;
+  object-fit: cover;
+}
+
+.about-content h2 {
+  font-size: 46px;
+  margin-bottom: 22px;
+  line-height: 1.15;
+}
+
+.about-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  font-size: 17px;
+}
+
+.feature-list {
+  display: grid;
+  gap: 14px;
+}
+
+.feature {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1f5c44;
+}
+
+/* MISSION SECTION */
+.mission-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 80px;
+  background: #f7f8f3;
+}
+
+.mission-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.mission-icon {
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.mission-card h3 {
+  color: #1f5c44;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.mission-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* IMAGE STRIP */
+.image-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.strip-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.strip-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.strip-item:hover img {
+  transform: scale(1.05);
+}
+
+.strip-item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(31, 92, 68, 0.85);
+  color: white;
+  text-align: center;
+  padding: 14px;
+  font-weight: 600;
+}
+
+/* ===========================
+   SERVICES PAGE
+=========================== */
+.services-page {
+  padding: 80px;
+  background: white;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.service-row.reverse {
+  direction: rtl;
+}
+
+.service-row.reverse > * {
+  direction: ltr;
+}
+
+.service-row-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.service-row-content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.service-row-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  font-size: 17px;
+}
+
+/* SERVICES CARDS SECTION */
+.services-cards-section {
+  padding: 80px;
+  background: #f7f8f3;
+  text-align: center;
+}
+
+.services-cards-section h2 {
+  font-size: 46px;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card-icon {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.service-card h3 {
+  color: #1f5c44;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* CTA SECTION */
+.cta-section {
+  background: #1f5c44;
+  color: white;
+  text-align: center;
+  padding: 80px;
+}
+
+.cta-section h2 {
+  font-size: 46px;
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  opacity: 0.85;
+  margin-bottom: 35px;
+}
+
+.cta-section .btn-link {
+  background: white;
+  color: #1f5c44;
+}
+
+.cta-section .btn-link:hover {
+  background: #f0f0f0;
+}
+
+/* ===========================
+   CONTACT PAGE
+=========================== */
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+  padding: 80px;
+  background: white;
+}
+
+.contact-form-wrap h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  border-color: #1f5c44;
+}
+
+.appointment-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.appointment-form button {
+  background: #1f5c44;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.appointment-form button:hover {
+  background: #174a37;
+}
+
+.contact-image {
+  width: 100%;
+  border-radius: 25px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 35px;
+}
+
+.contact-details {
+  display: grid;
+  gap: 22px;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.detail-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-detail-item strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.contact-detail-item p {
+  color: #666;
+  font-size: 15px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background: #1f5c44;
+  color: white;
+  padding: 50px 80px 30px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer-brand p {
+  opacity: 0.75;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-copy {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 25px;
+  text-align: center;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-image img {
+    height: 300px;
+  }
+
+  .stats-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 30px;
+    gap: 30px;
+  }
+
+  .services-preview,
+  .about-preview,
+  .doctors-section,
+  .testimonial-section,
+  .about-section,
+  .services-page,
+  .services-cards-section,
+  .contact-page,
+  .mission-section,
+  .cta-section {
+    padding: 60px 30px;
+  }
+
+  .preview-grid,
+  .doctors-grid,
+  .testimonials-grid,
+  .services-grid,
+  .mission-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-preview,
+  .about-section,
+  .service-row,
+  .contact-page {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .service-row.reverse {
+    direction: ltr;
+  }
+
+  .services-preview h2,
+  .about-preview-content h2,
+  .doctors-section h2,
+  .testimonial-section h2,
+  .about-content h2,
+  .services-cards-section h2,
+  .cta-section h2,
+  .page-hero h1 {
+    font-size: 34px;
+  }
+
+  .image-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page-hero {
+    padding: 60px 30px;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+  }
+}
