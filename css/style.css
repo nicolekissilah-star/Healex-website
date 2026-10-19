@@ -1,6 +1,4 @@
-/* ===========================
-   RESET & BASE
-=========================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +11,7 @@ body {
   color: #222;
 }
 
-/* ===========================
-   NAVBAR
-=========================== */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -70,9 +66,7 @@ nav a.active {
   transform: translateY(-1px);
 }
 
-/* ===========================
-   SHARED UTILITIES
-=========================== */
+
 .section-tag {
   color: #1f5c44;
   font-weight: 700;
@@ -98,9 +92,6 @@ nav a.active {
   transform: translateY(-2px);
 }
 
-/* ===========================
-   HERO
-=========================== */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr 340px;
@@ -196,9 +187,6 @@ nav a.active {
   background: #174a37;
 }
 
-/* ===========================
-   STATS STRIP
-=========================== */
 .stats-strip {
   display: flex;
   justify-content: space-around;
@@ -222,9 +210,7 @@ nav a.active {
   opacity: 0.85;
 }
 
-/* ===========================
-   SERVICES PREVIEW (home)
-=========================== */
+
 .services-preview {
   padding: 100px 80px;
   text-align: center;
@@ -256,7 +242,7 @@ nav a.active {
 }
 
 .preview-icon {
-  font-size: 36px;
+  display: none;
   margin-bottom: 18px;
 }
 
@@ -271,9 +257,7 @@ nav a.active {
   line-height: 1.7;
 }
 
-/* ===========================
-   ABOUT PREVIEW (home)
-=========================== */
+
 .about-preview {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -303,9 +287,6 @@ nav a.active {
   font-size: 17px;
 }
 
-/* ===========================
-   DOCTORS SECTION
-=========================== */
 .doctors-section {
   padding: 100px 80px;
   text-align: center;
@@ -356,9 +337,7 @@ nav a.active {
   margin-bottom: 20px;
 }
 
-/* ===========================
-   TESTIMONIALS
-=========================== */
+
 .testimonial-section {
   padding: 100px 80px;
   text-align: center;
@@ -395,9 +374,7 @@ nav a.active {
   color: #1f5c44;
 }
 
-/* ===========================
-   PAGE HERO (inner pages)
-=========================== */
+
 .page-hero {
   background: #1f5c44;
   color: white;
@@ -423,9 +400,7 @@ nav a.active {
   margin: auto;
 }
 
-/* ===========================
-   ABOUT PAGE
-=========================== */
+
 .about-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -484,7 +459,7 @@ nav a.active {
 }
 
 .mission-icon {
-  font-size: 36px;
+  display: none;
   margin-bottom: 18px;
 }
 
@@ -534,9 +509,7 @@ nav a.active {
   font-weight: 600;
 }
 
-/* ===========================
-   SERVICES PAGE
-=========================== */
+
 .services-page {
   padding: 80px;
   background: white;
@@ -734,7 +707,7 @@ nav a.active {
 }
 
 .detail-icon {
-  font-size: 24px;
+  display: none;
   flex-shrink: 0;
   margin-top: 2px;
 }

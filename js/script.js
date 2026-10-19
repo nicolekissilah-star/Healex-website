@@ -19,7 +19,7 @@ const form = document.getElementById("contactForm");
 if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("✅ Appointment request submitted! Our team will contact you within 24 hours.");
+    alert("Appointment request submitted! Our team will contact you within 24 hours.");
     form.reset();
   });
 }
@@ -30,7 +30,7 @@ if (quickCard) {
   const quickBtn = quickCard.querySelector("button");
   if (quickBtn) {
     quickBtn.addEventListener("click", () => {
-      alert("✅ Request received! We'll follow up shortly.");
+      alert("Request received! We'll follow up shortly.");
     });
   }
 }
